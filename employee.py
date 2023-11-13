@@ -17,33 +17,33 @@ class Employee:
         
         if self.name == 'Billie':
             set_salary_con(4000)
-            fstring = f'{self.name} works on a monthly salary of {contract_pay}. '
+            fstring = f'{self.name} works on a monthly salary of {contract_pay}.'
         elif self.name == 'Charlie':
             set_hourly_con(25, 100)
-            fstring = f'{self.name} works on a contract of 100 hours at 25/hour. '
+            fstring = f'{self.name} works on a contract of 100 hours at 25/hour.'
         elif self.name == 'Renee':
             set_salary_con(3000)
             set_con_comm(4, 200)
-            fstring = f'{self.name} works on a monthly salary of {contract_pay} and receives a commission for 4 contract(s) at 200/contract. '
+            fstring = f'{self.name} works on a monthly salary of {contract_pay} and receives a commission for 4 contract(s) at 200/contract.'
         elif self.name == 'Jan':
             set_hourly_con(25, 150)
             set_con_comm(3, 220)
-            fstring = f'{self.name} works on a contract of 150 hours at 25/hour and receives a commission for 3 contract(s) at 220/contract. '
+            fstring = f'{self.name} works on a contract of 150 hours at 25/hour and receives a commission for 3 contract(s) at 220/contract.'
         elif self.name == 'Robbie':
             set_salary_con(2000)
             set_bonus_comm(1500)
-            fstring = f'{self.name} works on a monthly salary of {contract_pay} and receives a bonus commission of 1500. '
+            fstring = f'{self.name} works on a monthly salary of {contract_pay} and receives a bonus commission of 1500.'
         elif self.name == 'Ariel':
             set_hourly_con(30, 120)
             set_bonus_comm(600)
-            fstring = f'{self.name} works on a contract of 120 hours at 30/hour and receives a bonus commission of 600. '
+            fstring = f'{self.name} works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.'
 
-        total_pay = get_total_pay()
+        #total_pay = get_total_pay()
 
-        return total_pay
+        return get_total_pay()
 
     def __str__(self):
-        final_string = f'{fstring} Their total pay is {get_total_pay()}.'
+        final_string = f'{fstring} Their total pay is {total_pay}.'
         return final_string
     
     def get_contract():

@@ -46,7 +46,7 @@ class Employee:
         return total_pay
 
     def __str__(self):
-        final string = fstring + 'Their total pay is ' + get_total_pay()
+        final_string = fstring + 'Their total pay is ' + get_total_pay() + '.'
         #return self.name
         #if self.name = 'Billie' or 'Renee' or 'Robbie':
             #fstring = f'{self.name} works on a {} of {get_contract()}. Their total pay is {get_total_pay}.'
@@ -66,7 +66,6 @@ class Employee:
 
     #def total_pay_substring():
     #    final_string = 
-
 
 
     

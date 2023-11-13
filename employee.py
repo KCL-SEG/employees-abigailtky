@@ -5,9 +5,7 @@ class Employee:
     
     contract_pay = 0
     total_pay = 0
-
-    #sal_con = False
-
+    comm_pay = 0
     
     commission = False
     fstring = ''
@@ -16,7 +14,6 @@ class Employee:
         self.name = name
 
     def get_pay(self):
-        #pass
         
         if self.name == 'Billie':
             set_salary_con(4000)
@@ -27,11 +24,11 @@ class Employee:
         elif self.name == 'Renee':
             set_salary_con(3000)
             set_con_comm(4, 200)
-            fstring = f'{self.name} works on a monthly salary of {contract_pay} and receives a commission for 4 contracts at 200/contract. '
+            fstring = f'{self.name} works on a monthly salary of {contract_pay} and receives a commission for 4 contract(s) at 200/contract. '
         elif self.name == 'Jan':
             set_hourly_con(25, 150)
             set_con_comm(3, 220)
-            fstring = f'{self.name} works on a contract of 150 hours at 25/hour and receives a commission for 3 contracts at 220/contract. '
+            fstring = f'{self.name} works on a contract of 150 hours at 25/hour and receives a commission for 3 contract(s) at 220/contract. '
         elif self.name == 'Robbie':
             set_salary_con(2000)
             set_bonus_comm(1500)
@@ -47,28 +44,6 @@ class Employee:
 
     def __str__(self):
         final_string = fstring + 'Their total pay is ' + get_total_pay() + '.'
-        #return self.name
-        #if self.name = 'Billie' or 'Renee' or 'Robbie':
-            #fstring = f'{self.name} works on a {} of {get_contract()}. Their total pay is {get_total_pay}.'
-        #else:
-            #string = f'{self.name} works on a {} of {get_contract()}. '
-        
-        #final_string = contract_pay_string + comm_pay_string
-        #return final_string
-
-
-    #def contract_pay_string():
-    #    if sal_con == True:
-    #        con_string = 'monthly salary'
-    #    else:
-    #        con_string = 'contract of {} hours at {}/hour'
-    #    fstring = f'{self.name} works on a {con_string}'
-
-    #def total_pay_substring():
-    #    final_string = 
-
-
-    
     
     def get_contract():
         return contract_pay
@@ -97,10 +72,6 @@ class Employee:
         else:
             total_pay = get_contract()
         return total_pay
-
-    #def add_to_string(phrase):
-        #fstring = f'{self.name} works on a {phrase}'
-    
 
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.

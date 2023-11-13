@@ -18,25 +18,25 @@ class Employee:
     def get_pay(self):
         #pass
         
-        if self == billie:
+        if self.name == 'Billie':
             set_salary_con(4000)
             fstring = f'{self.name} works on a monthly salary of {contract_pay}. '
-        elif self == charlie:
+        elif self.name == 'Charlie':
             set_hourly_con(25, 100)
             fstring = f'{self.name} works on a contract of 100 hours at 25/hour. '
-        elif self == renee:
+        elif self.name == 'Renee':
             set_salary_con(3000)
             set_con_comm(4, 200)
             fstring = f'{self.name} works on a monthly salary of {contract_pay} and receives a commission for 4 contracts at 200/contract. '
-        elif self == jan:
+        elif self.name == 'Jan':
             set_hourly_con(25, 150)
             set_con_comm(3, 220)
             fstring = f'{self.name} works on a contract of 150 hours at 25/hour and receives a commission for 3 contracts at 220/contract. '
-        elif self == robbie:
+        elif self.name == 'Robbie':
             set_salary_con(2000)
             set_bonus_comm(1500)
             fstring = f'{self.name} works on a monthly salary of {contract_pay} and receives a bonus commission of 1500. '
-        elif self == ariel:
+        elif self.name == 'Ariel':
             set_hourly_con(30, 120)
             set_bonus_comm(600)
             fstring = f'{self.name} works on a contract of 120 hours at 30/hour and receives a bonus commission of 600. '

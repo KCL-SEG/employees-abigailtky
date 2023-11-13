@@ -43,7 +43,8 @@ class Employee:
         return total_pay
 
     def __str__(self):
-        final_string = fstring + 'Their total pay is ' + get_total_pay() + '.'
+        final_string = f'{fstring} Their total pay is {get_total_pay()}.'
+        return final_string
     
     def get_contract():
         return contract_pay

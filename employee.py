@@ -23,7 +23,7 @@ class Employee:
             contract_pay = self.hourly_wage * self.hours_worked
 
         commission = self.calculate_commission()
-        self.total_pay = contract_pay + commission  # Store total pay in the instance variable
+        self.total_pay = contract_pay + commission
         return self.total_pay
 
     def calculate_commission(self):
@@ -57,7 +57,7 @@ class HourlyContract(Employee):
         self.hours_worked = hours_worked
 
     def __str__(self):
-        return f"{self.name} works on a contract of {self.hourly_wage} hours at {self.hours_worked}/hour. Their total pay is {self.total_pay}."
+        return f"{self.name} works on a contract of {self.hours_worked} hours at {self.hourly_wage}/hour. Their total pay is {self.total_pay}."
 
 # Subclass for employees on a fixed salary contract with a bonus commission
 class FixedContractWithBonus(Employee):
@@ -80,7 +80,7 @@ class HourlyContractWithBonus(Employee):
         self.bonus = bonus
 
     def __str__(self):
-        return f"{self.name} works on a contract of {self.hourly_wage} hours at {self.hours_worked}/hour and receives a bonus commission of {self.bonus}. Their total pay is {self.total_pay}."
+        return f"{self.name} works on a contract of {self.hours_worked} hours at {self.hourly_wage}/hour and receives a bonus commission of {self.bonus}. Their total pay is {self.total_pay}."
 
 # Subclass for employees on a fixed salary contract with a contract commission
 class FixedContractWithCommission(Employee):
@@ -92,7 +92,7 @@ class FixedContractWithCommission(Employee):
         self.contracts_landed = contracts_landed
 
     def __str__(self):
-        return f"{self.name} works on a monthly salary of {self.salary} and receives a commission for {self.contracts_landed} contract(s) at {self.contracts_landed}/contract. Their total pay is {self.total_pay}."
+        return f"{self.name} works on a monthly salary of {self.salary} and receives a commission for {self.contracts_landed} contract(s) at {self.commission_rate}/contract. Their total pay is {self.total_pay}."
 
 # Subclass for employees on an hourly contract with a contract commission
 class HourlyContractWithCommission(Employee):
@@ -105,7 +105,7 @@ class HourlyContractWithCommission(Employee):
         self.contracts_landed = contracts_landed
 
     def __str__(self):
-        return f"{self.name} works on a contract of {self.hourly_wage} hours at {self.hours_worked}/hour and receives a commission for {self.contracts_landed} contract(s) at {self.contracts_landed}/contract. Their total pay is {self.total_pay}."
+        return f"{self.name} works on a contract of {self.hours_worked} hours at {self.hourly_wage}/hour and receives a commission for {self.contracts_landed} contract(s) at {self.commission_rate}/contract. Their total pay is {self.total_pay}."
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
 billie = FixedContract('Billie', 4000)
